@@ -1,4 +1,4 @@
-/*/Home work
+//Home work
 // 1. Write a calculator. Request 2 numbers and an operation as a symbol(+ - * /). The program solves it depending on the operation
 //    and shows the result.
 let result = prompt('Please enter 2 numbers and an operation as a symbol(+ - * /)');
@@ -21,9 +21,10 @@ if (a + b) {
 // 2. Count the factorial of the number given by a user. For example, 4! is 1 * 2 * 3 * 4 = 24, 
 //    or 6! is 1 * 2 * 3 * 4 * 5 * 6 = 720.
 
+let factorialNumber = prompt('Please enter the factorial of the number.');
 let fraction = 0;
 for (let i = 1; i < 10; i++) {
-  fraction = fraction * i;
+  fraction *= i;
 }
 console.log(fraction);
 
@@ -31,7 +32,14 @@ console.log(fraction);
 // 3. Count sheep. Request a non-negative integer, 3 for example, and print a string with a murmur: "1 sheep...2 sheep...3 sheep..."    
 //    to the page as a paragraph. If a user types a negative number in, alert an error.
 
+let sheep = +prompt('Please enter a non-negative integer');
 
+for (let i = 0; i > 4; i++) {
+    document.write('<p>' + i + 'sheep' + '</p>');
+   if (i < 0) {
+      alert('It\'s an error.Please try again');
+    }
+}
 
 
 // 4. Show a user the prompt where they have to write a correct answer for 2 + 2 * 2. Show the prompt as many times until the user
@@ -92,16 +100,16 @@ if (userNumber === 1) {
 // 3. Ask a user 3 questions, each with 3 answer optioins. Write these options also in the prompt window, after
 //    a question. The user gets 2 points for each correct answer. Show the earned points after the test.
 
-let question1 = prompt('Which season is after Spring? Summer, Autumn or Winter);
-let question2 = prompt('What is Javascript? A book, A programming language, A computer);
-let question3 = prompt('How many hours has a day? 12, 24 or 36);
+let question1 = prompt('Which season is after Spring? Summer, Autumn or Winter');
+let question2 = prompt('What is Javascript? A book, A programming language, A computer');
+let question3 = prompt('How many hours has a day? 12, 24 or 36');
 points = 0;
 
-if (question1 === Summer || summer) {
+if (question1 === 'Summer || summer') {
     points += 2;
 }
 
-if (question2 === A programming language || a programming language || programming language) {
+if (question2 === 'A programming language || a programming language || programming language') {
     points += 2;
 }
 
@@ -182,17 +190,16 @@ do {
    
    alert('You got it!');
 
- 
- */ 
+
    
 // 4. for loop Count sheep. Request a non-negative integer,3 for example, and print a string with murmur: "1 sheep...2 sheep...3 sheep..." to the page using document.write().
 //    if a user types a negative number in, alert an error.
 
 let sheep = +prompt('Please enter a non-negative integer');
 
-for (let i = 0; i > 0; i++) {
+for (let i = 0; i > 4; i++) {
     document.write('<p>' + i + 'sheep' + '</p>');
-    //if (i < 0) {
-     //   alert('It\'s an error.Please try again');
-    //}
+   if (i < 0) {
+      alert('It\'s an error.Please try again');
+    }
 }
