@@ -1,57 +1,59 @@
-//Home work
+/*/Home work
 // 1. Write a calculator. Request 2 numbers and an operation as a symbol(+ - * /). The program solves it depending on the operation
 //    and shows the result.
-let result = prompt('Please enter 2 numbers and an operation as a symbol(+ - * /)');
-let add = number1 + number2;
-let substract = 0;
-let multiply = 0;
-let divide = 0;
+let number1 = +prompt('Please enter a number');
+let number2 = +prompt('Please enter another number');
+let operator = prompt('Please enter operator');
 
-if (a + b) {
-    alert(add);
-} else if (a - b) {
-    alert('number1' - 'number2');
-} else if (a * b) {
-    alert('number1' * 'number2');
-} else if (a / b) {
-    alert('number1' / 'number2');
+if (operator === '+' ) {
+    alert(number1 + number2);
+}
+if (operator === '-' ) {
+    alert(number1 - number2);
+}
+if (operator === '*' ) {
+    alert(number1 * number2);
+}
+if (operator === '/' ) {
+    alert(number1 / number2);
 }
 
 
 // 2. Count the factorial of the number given by a user. For example, 4! is 1 * 2 * 3 * 4 = 24, 
 //    or 6! is 1 * 2 * 3 * 4 * 5 * 6 = 720.
 
-let factorialNumber = prompt('Please enter the factorial of the number.');
-let fraction = 0;
-for (let i = 1; i < 10; i++) {
-  fraction *= i;
+let factorialNumber = +prompt('Please enter a number for the factorial.');
+let product = 1;
+for (let i = 1; i <= factorialNumber; i++) {
+    product *= i;
 }
-console.log(fraction);
 
+console.log(product);
 
 // 3. Count sheep. Request a non-negative integer, 3 for example, and print a string with a murmur: "1 sheep...2 sheep...3 sheep..."    
 //    to the page as a paragraph. If a user types a negative number in, alert an error.
 
-let sheep = +prompt('Please enter a non-negative integer');
+let sheep1 = +prompt('Please enter a non-negative integer');
 
-for (let i = 0; i > 4; i++) {
-    document.write('<p>' + i + 'sheep' + '</p>');
-   if (i < 0) {
-      alert('It\'s an error.Please try again');
+for (let i = 1; i <= sheep1; i++) {
+    if (i < 0) {
+        alert('It\'s an error. Please try again');
+    } else {
+       document.write('<p>' + i + ' sheep' + '</p>');
     }
 }
-
+*/
 
 // 4. Show a user the prompt where they have to write a correct answer for 2 + 2 * 2. Show the prompt as many times until the user
 //    answers correctly.
 
-let userAnswer = prompt('Please enter the result of 2 + 2 * 2');
-let feedback = userAnswer === 6 ? 'Well done, you got it!' : 'Failure is the key to success! Please try again!'
+let userAnswer = +prompt('Please enter the result of 2 + 2 * 2');
+let feedback = userAnswer === 6 ? 'Well done, You got it!' : 'Failure is the key to success! Please try again!'
 alert(feedback)
 
 
 
-
+/*
 
 //In class if-else exercises
 // 1. Request a user's age and define whether he/she is an infant(0-2), a child(3-11), a teen(12-18)
@@ -117,12 +119,21 @@ if (question3 === 24) {
     points += 2;
 }
 
-alert('Congratulations! You have earned  ' + points + ' points.')
+alert(`Congratulations! You have earned${points}points!`)
 
 
 
 // 4. Request a number from a user, and define whether it is positive, negative, or zero. Display a resultig message as an alert.
 
+let enterNumber= +prompt('Please enter a number');
+
+if (enterNumber > 0) {
+    alert('It\'s positive number.');
+} else if (enterNumber < 0) {
+    alert('It\'s negative number.');
+} else if (enterNumber == 0) {
+    alert('It\'s zero.');
+}
 
 
 // 5. Request a user's age and check whether it is realistic (0-120 y.o.). If it is realistic, display a message 'Hi! You are # years old',
@@ -191,15 +202,16 @@ do {
    alert('You got it!');
 
 
-   
+
 // 4. for loop Count sheep. Request a non-negative integer,3 for example, and print a string with murmur: "1 sheep...2 sheep...3 sheep..." to the page using document.write().
 //    if a user types a negative number in, alert an error.
 
-let sheep = +prompt('Please enter a non-negative integer');
+let sheep2 = +prompt('Please enter a non-negative integer.')
 
-for (let i = 0; i > 4; i++) {
-    document.write('<p>' + i + 'sheep' + '</p>');
-   if (i < 0) {
-      alert('It\'s an error.Please try again');
+for (let i = 1; i <= sheep2; i++) {
+    if (i < 0) {
+        alert('It\'s an error. Please try again.')
     }
+    document.write('<p>' + i + ' sheep' + '</p>');
 }
+*/   
