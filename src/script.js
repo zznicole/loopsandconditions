@@ -1,4 +1,4 @@
-/*/Home work
+//Home work
 // 1. Write a calculator. Request 2 numbers and an operation as a symbol(+ - * /). The program solves it depending on the operation
 //    and shows the result.
 let number1 = +prompt('Please enter a number');
@@ -42,26 +42,31 @@ for (let i = 1; i <= sheep1; i++) {
        document.write('<p>' + i + ' sheep' + '</p>');
     }
 }
-*/
+
 
 // 4. Show a user the prompt where they have to write a correct answer for 2 + 2 * 2. Show the prompt as many times until the user
 //    answers correctly.
 
 let userAnswer = +prompt('Please enter the result of 2 + 2 * 2');
-let feedback = userAnswer === 6 ? 'Well done, You got it!' : 'Failure is the key to success! Please try again!'
-alert(feedback)
+if (userAnswer === 6) {
+    alert('Well done! You got it!');
+}       else { 
+        do {
+            tryAgain = +prompt('Please try again! Failure is the key to success!');
+        } while(tryAgain !=6);
+
+        alert('Well done! You got it!');
+    }
 
 
-
-/*
 
 //In class if-else exercises
 // 1. Request a user's age and define whether he/she is an infant(0-2), a child(3-11), a teen(12-18)
-//    ,and an adult (19-60)or a senior citizen (60-...). Display the result in the console
+//    ,and an adult (19-60)or a senior citizen (60-...). Display the result in the console.
 
 let age = +prompt('Please enter your age.');
 
-if (age < 3) { 
+if (age < 3 && age >= 0) { 
     console.log('an infant');
 } else if (age > 2 && age < 12) {
     console.log('a child');
@@ -69,14 +74,15 @@ if (age < 3) {
     console.log('a teen');
 } else if (age >18 && age < 61) {
     console.log('an adult');
-} else if (age > 60); {
+} else if (age > 60) {
     console.log('a senior citizen');
 } 
+
 
 // 2. Requst a number from 0 to 9 from a user and display the symbol that is placed on that keyboard button
 //    for exameple, 1-!, 2-@, 3-# etc). Dispay the result in the console.
 
-let userNumber = prompt ('Please enter a number from 0 to 9.')
+let userNumber = +prompt('Please enter a number from 0 to 9.')
 
 if (userNumber === 1) {
     console.log('!');
@@ -102,25 +108,24 @@ if (userNumber === 1) {
 // 3. Ask a user 3 questions, each with 3 answer optioins. Write these options also in the prompt window, after
 //    a question. The user gets 2 points for each correct answer. Show the earned points after the test.
 
-let question1 = prompt('Which season is after Spring? Summer, Autumn or Winter');
-let question2 = prompt('What is Javascript? A book, A programming language, A computer');
-let question3 = prompt('How many hours has a day? 12, 24 or 36');
-points = 0;
+let answer1 = prompt('Which season is after Spring? Summer, Autumn or Winter');
+let answer2 = prompt('What is Javascript? A book, A programming language, A computer');
+let answer3 = +prompt('How many hours has a day? 12, 24 or 36');
+let points = 0;
 
-if (question1 === 'Summer || summer') {
+if (answer1 === 'Summer') {
     points += 2;
 }
 
-if (question2 === 'A programming language || a programming language || programming language') {
+if (answer2 === 'A programming language') {
     points += 2;
 }
 
-if (question3 === 24) {
+if (answer3 === 24) {
     points += 2;
 }
 
-alert(`Congratulations! You have earned${points}points!`)
-
+alert(`Congratulations! You have earned ${points} points!`)
 
 
 // 4. Request a number from a user, and define whether it is positive, negative, or zero. Display a resultig message as an alert.
@@ -138,8 +143,13 @@ if (enterNumber > 0) {
 
 // 5. Request a user's age and check whether it is realistic (0-120 y.o.). If it is realistic, display a message 'Hi! You are # years old',
 //    otherwise - 'Hm...Is it even possible?'.
-
-
+let yourAge = +prompt('Please enter your age.');
+    
+if (yourAge >= 0 && yourAge <= 120) {
+    alert(`Hi! You are ${yourAge} years old.`);
+} else {
+    alert('Hm...Is it even possible?');
+}
 
 
 //In class loop exercises
@@ -188,9 +198,17 @@ switch (month)  {
     document.write(`<p>${month}</p>`);
 
 
-// 2. while loop Request a number and an extent. Raise the number to the given power and display the result. Don't use ** or Math.pow()here.
+// 2. while loop Request a number and an exponent. Raise the number to the given power and display the result. Don't use ** or Math.pow()here.
+let numberExponent1 = +prompt('Please enter a number.');
+let numberExponent2 = +prompt('Please enter an exponent.');
+let i = 0;
+let exponentresult = 1
 
-
+while (i < numberExponent2) {
+    exponentresult *= numberExponent1;
+    i++;
+}
+alert(exponentresult);
 
 
 // 3. do while loop Suggest a user solve 2+2*2 until he/she does it right.
@@ -202,7 +220,6 @@ do {
    alert('You got it!');
 
 
-
 // 4. for loop Count sheep. Request a non-negative integer,3 for example, and print a string with murmur: "1 sheep...2 sheep...3 sheep..." to the page using document.write().
 //    if a user types a negative number in, alert an error.
 
@@ -210,8 +227,8 @@ let sheep2 = +prompt('Please enter a non-negative integer.')
 
 for (let i = 1; i <= sheep2; i++) {
     if (i < 0) {
-        alert('It\'s an error. Please try again.')
-    }
+        alert('It\'s an error. Please try again.');
+    } else {
     document.write('<p>' + i + ' sheep' + '</p>');
+    }
 }
-*/   
